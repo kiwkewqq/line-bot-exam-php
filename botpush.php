@@ -4,11 +4,11 @@
 
 require "vendor/autoload.php";
 
-$access_token = '3ALKAbKFoGuJyJnoDdn0HeyfbxLFtEXBKiC0lFeoNl/XbL4WhoCZzefp2n7UDuXaCWfErIDro07BnZNggJmXJChXTIlMPo8LRJ+n1LEgbRUaKehDkiCr5p5CakHrPX+gauOGX/R5bB2e5yi7xjnHDAdB04t89/1O/w1cDnyilFU=';
+$access_token = "O8fAN0RcTbEltLBlwwsC6iXg2xOeTvBiJHg9GdvKhI6mYzOUFd1GlmLnG/f2VEL58J+Lwwf7pg2Xu2hl/2FHlaPHccgs7zYAbtDXvcvOE5n/GO6JwHdqscJIdVHUSA/9sRVjAFhtlEHqh38LC+xQAQdB04t89/1O/w1cDnyilFU=";
 
-$channelSecret = '75c03f392f6e53d662d6f5a8db9e421f';
+$channelSecret = 'e8e6cfd72737e57b843bc76275d20fba';
 
-$pushID = 'U7ef7a449f2a5c2057eacfc02ba2eb286';
+$pushID = 'U32fb6b2d6ceb741f198896700348db1f';
 
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
@@ -17,10 +17,3 @@ $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
-
-
-
-
-
-
-
